@@ -1,0 +1,58 @@
+git config --global user.name "skyestarli8ht"
+git config --global user.email "sachin.singh611051@gmail.com"
+git config --global core.editor "code --wait"
+git config --global core.autocrlf
+
+
+git log --oneline   #to know current status of saved points
+git log --oneline --graph #Shows the path of commits
+git staus  -s #to know current status of unstaged and staged file
+
+.gitignore #write a file know that you want to ignore in commit
+
+U #untracked
+A #Added
+M #modified
+
+git reset --hard HEAD~1 #Go back one position in head
+git reset --soft 
+git reset --mixed
+
+git status -s  #check kar sakte konsi file kis stage mien hai
+               # Git status batata hai file ke changes ke bare mein
+
+git log --oneline  --graph  #check kar sakte kitne saved checkpoint hai
+                            #git log batata saare commit with details
+                            #git log --oneline same as git log but simpler explaination
+
+
+
+Branching
+
+git branch branchname  #creat branch
+git branch #show all branches
+git switch branchname  #switch branch
+git switch -C branchname #create branch and switch to that branch
+git merge branchname #merge to main branch
+git merge -d branchname #delete a branch
+
+#fast forword merge
+#3way merge
+
+Stashing
+
+git stash #stash changes
+git stash apply # to get those changes back
+git stash clear #clear stash data
+
+
+
+Github 
+
+echo "# testingtest" >>README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/skyestarli8ht/100Days-100Projects
+git push -u origin main
