@@ -47,7 +47,7 @@ git stash clear #clear stash data
 
 
 
-Github 
+Github #setup
 
 echo "# testingtest" >>README.md
 git init
@@ -57,4 +57,33 @@ git branch -M main
 git remote add origin https://github.com/skyestarli8ht/100Days-100Projects
 git push -u origin main
 
-d
+
+#To push new code
+git add .       #will select all files
+git commit -m "comment for commit or title of commit"
+git push -u origin main     #pushing main branch
+
+
+#If someone collabrating with you they have to creat new branch
+git switch -C feature/text-box 
+
+#here they have to write their code & push code 
+
+#Owner have to merge that code & have to folllow these codes
+git fetch   #fetch new commit to thier system (new branch in this case)
+
+#switch to that branch to review the code 
+git switch feature/text-box
+
+#switch back to main branch 
+git switch main
+
+#merge the new branch to main branch
+git merge feature/text-box
+
+#push the main branch
+git push origin main
+
+
+#now collabrator have to get the main branch 
+git fetch       #fetch the latest repo
